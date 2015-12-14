@@ -47,7 +47,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('clean', function() {
-    return del(['static/css', '/static/js', 'static/img']);
+    return del(['static/css', 'static/js', 'static/img']);
 });
 
 gulp.task('watch', function() {
