@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="Yan Hong">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content="{{ request.path }}">
+    {% block thumbnail %}{% endblock %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/logo.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    {% if not DEBUG %}
+    {% endif %}
+    <title>{% block head_title %}{% endblock %}</title>
+</head>

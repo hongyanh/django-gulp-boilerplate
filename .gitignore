@@ -1,0 +1,17 @@
+*~
+.DS_Store
+venv/
+.idea/
+*.pyc
+staticfiles/
+*.sqlite3
+.Spotlight-V100
+.Trashes
+*.log
+.sass-cache/
+*.map
+keys.py
+node_modules/
+bower_components/
+mediafiles/
+docker-compose.yml

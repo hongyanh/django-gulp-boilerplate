@@ -1,0 +1,349 @@
+.card {
+  @extend .shadow-lb;
+  margin: $size-r1;
+  display: inline-block;
+  vertical-align: top;
+  width: $card-width;
+  height: $card-height;
+}
+.card .img-container {
+  height: $card-img-height;
+  background-color: $black-dark;
+  position: relative;
+  & img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+  }
+}
+.img-border {
+  @extend .white-bd-l;
+  border-width: 10px;
+}
+.bg-img-fix {
+  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+.bg-img {
+  background: url(../images/bg.jpg) no-repeat center center; 
+  background-size: cover;
+  position: relative;
+}
+.cover {
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.center-v {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.bg-video {
+  position: relative;
+  overflow: hidden;
+}
+video#bgvid {
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.flash {
+  @extend .full-width;
+  padding: $size-r1;
+  color: $white-base;
+  position: relative;
+}
+.flash-pri {
+  @extend .flash;
+  @extend .pri-bd-l;
+  background-color: $primary-base;
+}
+.flash-sec {
+  @extend .flash;
+  @extend .sec-bd-l;
+  background-color: $secondary-base;
+}
+.flash-ter {
+  @extend .flash;
+  @extend .ter-bd-l;
+  background-color: $tertiary-base;
+}
+nav > ul > li {
+  display: inline-block;
+  margin: $size-r1;
+}
+.pri-bg > ul > li > a,.sec-bg > ul > li > a,.ter-bg > ul > li > a {
+  color: $white-base;
+}
+.pri-bg > ul > li > a:hover,.sec-bg > ul > li > a:hover,.ter-bg > ul > li > a:hover {
+  color: $white-light;
+}
+.circle {
+  border-radius: 50%;
+}
+.round {
+  border-radius: $size-r1;
+}
+.nav-bar {
+  width: 100%;
+  box-shadow: 0px 2px 10px -5px rgba(100,100,100,.5);
+}
+.dropdown {
+  cursor: pointer;
+  position:relative;
+  float: left;
+  width: 100%;
+}
+.dropdown > ul {
+  box-shadow: 0px 2px 10px -5px rgba(100,100,100,.5);
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding-left: 0;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+  margin: 0;
+}
+.dropdown > ul > li {
+  margin: 0;
+  padding: 0;
+}
+.dropdown:hover > ul {
+  display: block;
+}
+
+.dropdown > ul > li > a {
+  color: $black-light;
+  padding: $size-r1 $size-r2;
+  display: block
+}
+
+.dropdown > ul > li > a:hover {
+  color: $black-base;
+}
+
+.dropdown:hover > ul > li:hover {
+  background-color: $white-base;
+  color: $black-base;
+}
+.pointer {
+  position: absolute;
+  border-style: solid;
+  border-width: 0 25px 15px;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -15px;
+  left: 70px;
+}
+.content-break::before { 
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  width: 25%;
+  margin-right: $size-r2;
+  background-color: $white-dark;
+}
+.content-break::after { 
+  content: "";
+  display: inline-block;
+  height: 1px;
+  vertical-align: middle;
+  width: 25%;
+  margin-left: $size-r2;
+  background-color: $white-dark;
+}
+.arrow-up {
+  @include arrow-up($black-base, 10px);
+}
+.arrow-down {
+  @include arrow-down($black-base, 10px);
+}
+.arrow-left {
+  @include arrow-left($black-base, 10px);
+}
+.arrow-right {
+  @include arrow-right($black-base, 10px);
+}
+.crs {
+  width: $carousel-width;
+  height: $carousel-height;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: .1rem;
+  border: 1px solid $white-light;
+  background-color: $black-dark;
+}
+.crs-img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+.crs button {
+  @extend .margin-l1r1;
+  font-size: 2rem;
+  font-weight: $font-light;
+  position: absolute;
+  top: 45%;
+  opacity: 0;
+  transition: opacity .5s linear;
+  padding: 1rem;
+}
+.crs:hover button {
+  opacity: .7;
+}
+.crs button.left {
+  left: 0;
+}
+.crs button.right {
+  right: 0;
+}
+.crs-thumb {
+  width: $carousel-width;
+  .thumb {
+    float: left;
+    width: $carousel-width / 5;
+    height: $carousel-height / 5;
+    border: 1px solid $white-light;
+    &.active {
+      border: 1px solid $primary-base;
+    }
+  }
+}
+.overlay {
+  background-color: $black-base;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.modal {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: scroll;
+}
+.modal .content {
+  background-color: $white-base;
+  width: $modal-width;
+  position: absolute;
+  top: 5%;
+  padding: 2rem;
+  left: (100% - $modal-width) / 2;
+}
+.close {
+  @extend .clear;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  &:before, &:after {
+    content: " ";
+    width: 50px;
+    height: 5px;
+    display: block;
+    background-color: $grey-base;
+    top: 25px;
+    position: absolute;
+    right: 5px;
+    transition: background 0.5s ease;
+  }
+  &:hover:before, &:hover:after {
+    background-color: $black-light;
+  }
+  &:before {
+    transform: rotate3d(0,0,1,45deg);
+    -ms-transform: rotate3d(0,0,1,45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
+  }
+  &:after {
+    transform: rotate3d(0,0,1,-45deg);
+    -ms-transform: rotate3d(0,0,1,-45deg);
+    -webkit-transform: rotate3d(0,0,1,-45deg);
+  }
+}
+.flash .close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  right: 10px;
+  &:before, &:after {
+    width: 25px;
+    height: 2px;
+    top: 10px;
+    right: 0px;
+    background-color: #fff;
+  }
+}
+.info-box {
+  display: inline;
+  position: relative;
+}
+.info-box .box {
+  display: none;
+  position: absolute;
+  margin-top: -10px;
+  left: 0;
+  z-index: 10;
+  & > * {
+    background-color: $black-light;
+    color: $white-dark;
+    margin-top: 10px;
+    width: 200px;
+    @extend .padding-1;
+  }
+  &:before {
+    content: " ";
+    @include arrow-up($black-light, 10px);
+  }
+}
+.info-box:hover .box {
+  display: block;
+}
+.nested-list {
+  & > .list {
+    & li {
+      position: relative;
+    }
+    & li:hover .list {
+      display: block;
+    }
+  }
+  & > .list .list {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 5;
+  }
+}
