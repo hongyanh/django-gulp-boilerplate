@@ -8,13 +8,14 @@ What's included?
 - Django base [Dockerfile](https://docs.docker.com/)
 - [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
 - [Browsersync](https://www.browsersync.io/docs/)
-- Bower
+- [Django Bower](https://django-bower.readthedocs.org/en/latest/usage.html)
 - [Open Style UI Framework](http://hongyanh.github.io/open-style/)
 - [Django Allauth](http://django-allauth.readthedocs.org/en/latest/)
 - [Django Avatar](http://django-avatar.readthedocs.org/en/latest/)
 - Raven (for [Sentry](https://getsentry.com/welcome/) integration)
 - Postgresql connector
 - Template structure
+- [JQuery](http://learn.jquery.com/about-jquery/how-jquery-works/)
 
 How to setup?
 ------
@@ -49,14 +50,15 @@ How to setup?
   3. Run `virtualenv venv`
   4. Run `source venv/bin/activate`
 3. Run `pip install -r requirements.txt`
-4. Install [PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04) and create your user and database
-3. Run `python manage.py migrate`
-4. Install [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) with [npm](https://nodejs.org/en/) `npm install -g gulp`
-5. Install [SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) with `npm install -g jshint` and [JShint](http://jshint.com/install/) with `npm install -g jshint`
-6. Run `python manage.py runserver`
-7. In another terminal window, run `gulp` and it should bring up your default browser
+4. Run `python manage.py bower install`
+5. Install [PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04) and create your user and database
+6. Run `python manage.py migrate`
+7. Install [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) with [npm](https://nodejs.org/en/) `npm install -g gulp`
+8. Install [SASS](http://sass-lang.com/documentation/file.SASS_REFERENCE.html) with `npm install -g jshint` and [JShint](http://jshint.com/install/) with `npm install -g jshint`
+9. Run `python manage.py runserver`
+10. In another terminal window, run `gulp` and it should bring up your default browser
 
-File Structure
+Project Structure
 ------
 * **/assets/** Your working static folder
   * **/img/** Put all your images in this folder
